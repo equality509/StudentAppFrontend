@@ -6,7 +6,8 @@
 
 
 # Models
-https://imgur.com/a/aF9Kzqr
+
+[Models](https://i.imgur.com/WkvWoy0.png)
 
 # Route Table
 | Endpoint | Method | Description |
