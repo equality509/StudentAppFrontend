@@ -7,7 +7,7 @@
 
 # Models
 
-[Models](https://i.imgur.com/WkvWoy0.png)
+![Models](https://i.imgur.com/WkvWoy0.png)
 
 # Route Table
 | Endpoint | Method | Description |
@@ -26,7 +26,7 @@
 | 6, 7 |    If something is not finished from the pryor days, this will also be the days that we provide and update these features.| 
 
 # Trello
-[Trello Board](https://trello.com/invite/b/TShlunOt/ATTI0abf7e210b87e1d3b034e179b2b71de6AFACF11D/student-tracker-project)
+![Trello Board](https://trello.com/invite/b/TShlunOt/ATTI0abf7e210b87e1d3b034e179b2b71de6AFACF11D/student-tracker-project)
 
 # Wireframes
 
