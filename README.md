@@ -1,4 +1,4 @@
-# Backend Student App.
+# Frontend Student App.
 - **Creators:** Eric Turner, Semih Buyuksariyildiz, Jacob Thornburg, Mandana
 - **Description:** A JSON API designed to input and save student data in multiple different categories.
 - **Technologies Used:** Javascript, React, React-Dom, React-Router-Dom, Render.com
@@ -6,7 +6,7 @@
 
 
 # Models
-https://imgur.com/a/aF9Kzqr
+[Models](https://imgur.com/a/aF9Kzqr)
 
 # Route Table
 | Endpoint | Method | Description |
@@ -28,3 +28,13 @@ https://imgur.com/a/aF9Kzqr
 [Trello Board](https://trello.com/invite/b/TShlunOt/ATTI0abf7e210b87e1d3b034e179b2b71de6AFACF11D/student-tracker-project)
 
 # Live Site
+
+
+# Role Assignment
+- Eric Turner - Release Manager
+- Semih Buyuksariyildiz - Product manager
+- Mandana - Lead front-end dev
+- Jacob Thornburg - Lead back-end dev
+
+# Wireframes
+[WireFrame](https://docs.google.com/drawings/d/1vlHFFLUVstVfH6cwCjN77KvHYL-q8tFIVCyOIGlOejo/edit?usp=sharing)
