@@ -5,8 +5,8 @@ export const createAction = async ({request}) => {
     const formData = await request.formData();
 
     const newStudent = {
-        url: formData.get("url"),
-        title: formData.get("title")
+        name: formData.get("name"),
+        gender: formData.get("gender")
     }
 
     await fetch(URL + "/student", {
@@ -25,8 +25,8 @@ export const updateAction = async ({request, params}) => {
     const formData = await request.formData();
 
     const updatedStudent = {
-        url: formData.get("url"),
-        title: formData.get("title")
+        name: formData.get("name"),
+        gender: formData.get("gender")
     }
 
     await fetch(URL + `/student/${params.id}`, {
