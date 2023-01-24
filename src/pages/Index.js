@@ -19,7 +19,7 @@ function Index(props) {
             {students.map((student) => (
                 <div className="studentEntry" key={student._id}>
             
-           <h2>Update <a href={student.name} alt={student.title}>{student.name} </a></h2>
+           <h2>Update <a href={student._id} alt={student.title}>{student.name} </a></h2>
            
         <Form action={`/update/${student._id}`} method="post">
             <input type="input" name="name" defaultValue={student.name}/>
@@ -30,10 +30,10 @@ function Index(props) {
             <input type="input" name="linkedin" defaultValue={student.linkedin}/>
             <input type="input" name="gpa" defaultValue={student.gpa}/>
             <input type="input" name="absences" defaultValue={student.absences}/>
-            <input type="submit" value={`update ${student.title}`}/>
+            <input type="submit" value={`Update ${student.name}`}/>
         </Form>  
         <Form action={`/delete/${student._id}`} method="post">
-            <input type="submit" value={`delete ${student.title}`}/>
+            <input type="submit" value={`Delete ${student.name}`}/>
         </Form>
                 </div>
             ))}
