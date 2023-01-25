@@ -1,3 +1,3 @@
-const URL = "https://studentbackend.onrender.com"
+const URL = "https://studentbackend2.onrender.com"
 
 export default URL;
