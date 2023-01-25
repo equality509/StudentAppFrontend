@@ -9,8 +9,14 @@ function Index(props) {
     <div>
         <h2>Create a New Student</h2>
         <Form action="/create" method="post">
-            <input type="input" name="title" placeholder="Name" />
-            <input type="input" name="url" placeholder="http://" />
+            <input type="input" name="name" placeholder="name"/>
+            <input type="input" name="gender" placeholder="gender"/>
+            <input type="input" name="enrollment" placeholder="enrollment #"/>
+            <input type="input" name="address" placeholder="address"/>
+            <input type="input" name="phone" placeholder="phone"/>
+            <input type="input" name="linkedin" placeholder="linkedin"/>
+            <input type="input" name="gpa" placeholder="gpa"/>
+            <input type="input" name="absences" placeholder="absences"/>
             <input type="submit" value="Create" />
         </Form>
 
