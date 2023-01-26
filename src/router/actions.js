@@ -6,7 +6,13 @@ export const createAction = async ({request}) => {
 
     const newStudent = {
         name: formData.get("name"),
-        gender: formData.get("gender")
+        gender: formData.get("gender"),
+        enrollment: formData.get("enrollment"),
+        address: formData.get("address"),
+        phone: formData.get("phone"),
+        linkedin: formData.get("linkedin"),
+        gpa: formData.get("gpa"),
+        absences: formData.get("absences")
     }
 
     await fetch(URL + "/student", {
@@ -26,7 +32,13 @@ export const updateAction = async ({request, params}) => {
 
     const updatedStudent = {
         name: formData.get("name"),
-        gender: formData.get("gender")
+        gender: formData.get("gender"),
+        enrollment: formData.get("enrollment"),
+        address: formData.get("address"),
+        phone: formData.get("phone"),
+        linkedin: formData.get("linkedin"),
+        gpa: formData.get("gpa"),
+        absences: formData.get("absences")
     }
 
     await fetch(URL + `/student/${params.id}`, {

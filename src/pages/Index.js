@@ -1,6 +1,5 @@
 import { useLoaderData, Form } from "react-router-dom";
 import { MdDeleteForever } from "react-icons/md";
-import {GrDocumentUpdate} from 'react-icons/gr';
 import { GrUpdate } from "react-icons/gr";
 
 function Index(props) {
@@ -20,6 +19,7 @@ function Index(props) {
           {/* Div for input fields */}
           <div className="flex mt-4 ml-auto sm:mt-0">
             {/* Form with input fields */}
+            
             <Form className="flex space-x-6" action="/create" method="post">
               {/* divs containing input fields */}
               <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
@@ -74,6 +74,7 @@ function Index(props) {
                 Add A Student
               </button>
             </Form>
+            
           </div>
         </div>
         
@@ -157,47 +158,53 @@ function Index(props) {
                 {/* mapping through the data */}
                 {students.map((student) => (
                   // table element with data output
+                  
                   <tbody
                     key={student._id}
                     className="bg-white divide-y divide-gray-200"
                   >
                     <tr>
-                      <td className="py-2 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">
-                        {student.name}
+                    
+                      <td className="py-2 pl-4 pr-3 w-[10rem] text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">
+                        <input type="input" className="pl-1 w-[10rem] mr-0" name='name' id='name' defaultValue={student.name}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-900 whitespace-nowrap">
-                        {student.gender}
+                      <td className="px-2 py-2 w-[10rem] text-sm text-gray-900 whitespace-nowrap">
+                        <input type="input" name="gender" className="pl-1 w-[4rem]" id="gender" defaultValue={student.gender}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-900 whitespace-nowrap">
-                        {student.enrolment}
+                      <td className="px-2 py-2 text-sm w-[7rem] text-gray-900 whitespace-nowrap">
+                        <input type="input" name="enrollment" id="enrollment" className="pl-1 w-[5rem]" defaultValue={student.enrollment}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
-                        {student.address}
+                      <td className="px-2 py-2 text-sm w-[18rem] text-gray-500 whitespace-nowrap">
+                        <input type="input" name="address" id="address" className="w-[18rem]" defaultValue={student.address}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
-                        {student.phone}
+                      <td className="px-2 py-2 w-[15rem] text-sm text-gray-500 whitespace-nowrap">
+                        <input type="input" name="phone" id="phone" className="w-[10rem]" defaultValue={student.phone}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
-                        {student.linkedin}
+                      <td className="px-2 py-2 text-sm text-gray-500 w-[6rem] whitespace-nowrap">
+                        <input type="input" name="linkedin" id="linkedin" className="w-[6rem]" defaultValue={student.linkedin}/>
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
-                        {student.gpa}
+                      <td className="px-2 py-2 text-sm text-gray-500 w-[3rem] whitespace-nowrap">
+                        <input type="input" name="gpa" id="gpa" className="w-[3rem]" defaultValue={student.gpa} />
                       </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 whitespace-nowrap">
-                        {student.absences}
+                      <td className="px-2 py-2 text-sm text-gray-500 w-[3rem] whitespace-nowrap">
+                        <input type="input" name="absences" id="absences" className="w-[3rem]" defaultValue={student.absences} />
                       </td>
                       {/* update/edit button  */}
                       <td className="relative whitespace-nowrap py-2 w-[1.75rem] pl-0 pr-0 text-center text-sm font-medium sm:pr-6">
-                        <Form action={`/update/${student._id}`} method="post">
-                          <button className="text-indigo-600 hover:text-indigo-900">
+                      <Form action={`/update/${student._id}`} method="post">
+                          <button 
+                          type="submit"
+                          className=" text-[1.6rem]">
                             {/* {`Edit ${student.name}`} */}
-                            <GrDocumentUpdate/>
+                            <GrUpdate/>
                           </button>
-                        </Form>
+                          </Form>
                       </td>
+                     
+                      
                       {/* delete button */}
                       <td className="relative whitespace-nowrap w-[1.75rem] py-2 pl-0 pr-4 text-right text-sm font-medium sm:pr-6">
-                        <Form action={`/delete/${student.name}`}>
+                        <Form action={`/delete/${student._id}`} method="post">
                           <button
                             type="submit"
                             className="text-[#e98074] hover:text-[#e85a4f] text-[2rem]"
@@ -208,6 +215,9 @@ function Index(props) {
                       </td>
                     </tr>
                   </tbody>
+                  
+                 
+                  
                 ))}
               </table>
             </div>
