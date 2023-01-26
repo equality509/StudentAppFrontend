@@ -4,7 +4,7 @@ import { GrUpdate } from "react-icons/gr";
 
 function Index(props) {
   const students = useLoaderData();
-
+  
   return (
     // Main Div Containig Everything
     <div className="px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ function Index(props) {
 
               <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
                 <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Phone</label>
-                <input type="text" name="[phone]" id="phone" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
+                <input type="text" name="phone" id="phone" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
               </div>
 
               <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
