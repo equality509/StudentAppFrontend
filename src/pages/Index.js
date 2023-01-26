@@ -1,5 +1,6 @@
 import { useLoaderData, Form } from "react-router-dom";
 import { MdDeleteForever } from "react-icons/md";
+import {GrDocumentUpdate} from 'react-icons/gr';
 import { GrUpdate } from "react-icons/gr";
 
 function Index(props) {
@@ -136,7 +137,7 @@ function Index(props) {
                       scope="col"
                       className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
                     >
-                      Absneces
+                      Absences
                     </th>
                     <th
                       scope="col"
@@ -189,7 +190,8 @@ function Index(props) {
                       <td className="relative whitespace-nowrap py-2 w-[1.75rem] pl-0 pr-0 text-center text-sm font-medium sm:pr-6">
                         <Form action={`/update/${student._id}`} method="post">
                           <button className="text-indigo-600 hover:text-indigo-900">
-                            {`Edit ${student.name}`}
+                            {/* {`Edit ${student.name}`} */}
+                            <GrDocumentUpdate/>
                           </button>
                         </Form>
                       </td>
