@@ -1,231 +1,108 @@
 import { useLoaderData, Form } from "react-router-dom";
-import { MdDeleteForever } from "react-icons/md";
-import { GrUpdate } from "react-icons/gr";
 
 function Index(props) {
   const students = useLoaderData();
-  
+
   return (
-    // Main Div Containig Everything
-    <div className="px-4 sm:px-6 lg:px-8">
-      {/* Add Student Div */}
-      <div className="flex-col w-[100%] sm:flex sm:items-center">
-        {/* Div Containing The Main Title */}
-        <div className="w-[100%] p-[.75rem] text-xl uppercase">
-          <h2>Create A new Student</h2>
-        </div>
-        {/* Div Containig The inputs for adding a student */}
-        <div className="flex w-[100%] py-[1rem] pr-[1rem]">
-          {/* Div for input fields */}
-          <div className="flex mt-4 ml-auto sm:mt-0">
-            {/* Form with input fields */}
-            
-            <Form className="flex space-x-6" action="/create" method="post">
-              {/* divs containing input fields */}
-              <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Name</label>
-                <input type="text" name="name" id="name" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative rounded-md border border-black w-[5rem] px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Gender</label>
-                <input type="text" name="gender" id="gender" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative rounded-md border border-black w-[5rem] px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Enrollment</label>
-                <input type="text" name="enrollment" id="enrollment" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Address</label>
-                <input type="text" name="address" id="address" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Phone</label>
-                <input type="text" name="phone" id="phone" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">LinkedIn</label>
-                <input type="text" name="linkedin" id="linkedin" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative outline-none w-[3.25rem] rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" className="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">GPA</label>
-                <input type="text" name="gpa" id="gpa" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              <div class="relative outline-none w-[4.5rem] rounded-md border border-black px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-                <label for="name" class="absolute -top-2 left-2 -mt-px inline-block bg-[#EAE7DC] px-1 text-xs font-medium text-gray-900">Absneces</label>
-                <input type="text" name="absences" id="absences" className="bg-[transparent] outline-none block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"/>
-              </div>
-
-              {/* Button for adding a student */}
-              <button
-                type="submit"
-                class=" inline-flex items-center justify-center rounded-md 
-                    border-[3px] px-4 py-0 text-sm h-[2.5rem]
-                    font-medium text-white shadow-sm hover:bg-indigo-700 hover:text-white
-                    bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500
-                    uppercase ease-in-out duration-500"
-              >
-                Add A Student
-              </button>
-            </Form>
-            
-          </div>
-        </div>
+    <div className="flex flex-col w-screen">
         
-      </div>
-
-      {/* Div containing the table with the data output and the table header */}
-      <div className="flex flex-col mt-8">
-        {/* Div containing the table with data output */}
-        <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          {/* Div containig the table with data output */}
-          <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+      <div className="flex flex-col m-auto  mt-[1rem] border-[2px] rounded-[20px] w-[55rem]">
+        
+        <h2 className="py-3 mr-auto ml-[2.75rem] font-bold text-lg uppercase text-[black]">Create a New Student</h2>
+        
+        <div className="">
+          <Form action="/create" method="post" className="flex flex-col border-t-[2px]  border-[black] pt-4">
             
-            <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-              <table className="min-w-full divide-y divide-gray-300">
-                {/* table header */}
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-                    >
-                      Name
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Gender
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Enrollment
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Address
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Phone
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Linkedin
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      GPA
-                    </th>
-                    <th
-                      scope="col"
-                      className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
-                      Absences
-                    </th>
-                    <th
-                      scope="col"
-                      className="relative whitespace-nowrap py-3.5 pl-3 pr-4 sm:pr-6"
-                    >
-                      <span className="sr-only">Edit</span>
-                    </th>
-                    <th
-                      scope="col"
-                      className="relative whitespace-nowrap py-3.5 pl-3 pr-4 sm:pr-6"
-                    >
-                      <span className="sr-only">Edit</span>
-                    </th>
-                  </tr>
-                </thead>
+            <div className="flex flex-col justify-center">
+              
+              <div className="flex pb-[.5rem] m-auto space-x-4">
+                <input type="input" name="name" placeholder="Name" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+                <input type="input" name="gender" placeholder="Gender" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+                <input type="input" name="enrollment" placeholder="Enrollment #" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]" />
+                <input type="input" name="address" placeholder="Address" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+              </div>
 
-                {/* mapping through the data */}
-                {students.map((student) => (
-                  // table element with data output
-                  
-                  <tbody
-                    key={student._id}
-                    className="bg-white divide-y divide-gray-200"
-                  >
-                    <tr>
-                    
-                      <td className="py-2 pl-4 pr-3 w-[10rem] text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">
-                        <input type="input" className="pl-1 w-[10rem] mr-0" name='name' id='name' defaultValue={student.name}/>
-                      </td>
-                      <td className="px-2 py-2 w-[10rem] text-sm text-gray-900 whitespace-nowrap">
-                        <input type="input" name="gender" className="pl-1 w-[4rem]" id="gender" defaultValue={student.gender}/>
-                      </td>
-                      <td className="px-2 py-2 text-sm w-[7rem] text-gray-900 whitespace-nowrap">
-                        <input type="input" name="enrollment" id="enrollment" className="pl-1 w-[5rem]" defaultValue={student.enrollment}/>
-                      </td>
-                      <td className="px-2 py-2 text-sm w-[18rem] text-gray-500 whitespace-nowrap">
-                        <input type="input" name="address" id="address" className="w-[18rem]" defaultValue={student.address}/>
-                      </td>
-                      <td className="px-2 py-2 w-[15rem] text-sm text-gray-500 whitespace-nowrap">
-                        <input type="input" name="phone" id="phone" className="w-[10rem]" defaultValue={student.phone}/>
-                      </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 w-[6rem] whitespace-nowrap">
-                        <input type="input" name="linkedin" id="linkedin" className="w-[6rem]" defaultValue={student.linkedin}/>
-                      </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 w-[3rem] whitespace-nowrap">
-                        <input type="input" name="gpa" id="gpa" className="w-[3rem]" defaultValue={student.gpa} />
-                      </td>
-                      <td className="px-2 py-2 text-sm text-gray-500 w-[3rem] whitespace-nowrap">
-                        <input type="input" name="absences" id="absences" className="w-[3rem]" defaultValue={student.absences} />
-                      </td>
-                      {/* update/edit button  */}
-                      <td className="relative whitespace-nowrap py-2 w-[1.75rem] pl-0 pr-0 text-center text-sm font-medium sm:pr-6">
-                      <Form action={`/update/${student._id}`} method="post">
-                          <button 
-                          type="submit"
-                          className=" text-[1.6rem]">
-                            {/* {`Edit ${student.name}`} */}
-                            <GrUpdate/>
-                          </button>
-                          </Form>
-                      </td>
-                     
-                      
-                      {/* delete button */}
-                      <td className="relative whitespace-nowrap w-[1.75rem] py-2 pl-0 pr-4 text-right text-sm font-medium sm:pr-6">
-                        <Form action={`/delete/${student._id}`} method="post">
-                          <button
-                            type="submit"
-                            className="text-[#e98074] hover:text-[#e85a4f] text-[2rem]"
-                          >
-                            <MdDeleteForever />
-                          </button>
-                        </Form>
-                      </td>
-                    </tr>
-                  </tbody>
-                  
-                 
-                  
-                ))}
-              </table>
+            <div className="flex m-auto space-x-4">  
+                <input type="input" name="phone" placeholder="Phone" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+                <input type="input" name="linkedin" placeholder="Linkedin" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+                <input type="input" name="gpa" placeholder="Gpa" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
+                <input type="input" name="absences" placeholder="Absences" className="pl-2 border-[black] outline-none h-[2rem] bg-transparent border-b-[2px]"/>
             </div>
-          </div>
+            
+            </div>
+            <div className="flex py-3">
+            <input  type="submit" value="Create" 
+                      className="pl-2inline-flex items-center rounded-md border-[3px] px-4 py-0 text-sm h-[2.5rem]
+                      font-medium text-white shadow-sm hover:bg-indigo-700 hover:text-white
+                      bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500
+                      uppercase ease-in-out duration-500 cursor-pointer w-[20rem] m-auto"/>
+            </div>
+          </Form>
         </div>
       </div>
+      
+      <div className="border-[2px] border-[#b8a181] w-[65rem] m-auto bg-[#b8a181] text-[white] pl-[2.5rem] text-[1.5rem]">
+        <h2>All Students</h2>
+      </div>
+      
+      {students.map((student) => (
+        <div className="studentEntry w-[65rem] m-auto bg-[#EAE7DC] px-5 border-[#b8a181] border-[2px]" key={student._id}>
+          <h2 className="ml-[-.25rem] p-[.25rem] uppercase font-semibold text-gray-500">
+            <a href={student._id} alt={student.title}>
+              {/* {student.name}{" "} */}
+            </a>
+          </h2>
+
+          <Form action={`/update/${student._id}`} method="post" className="flex px-0">
+            <input type="input" 
+                   name="name" 
+                   className="w-[10rem] border-[1px] border-[black] pl-1" 
+                   defaultValue={student.name} />
+            <input type="input" 
+                   name="gender" 
+                   className="w-[5rem] border-[1px] border-[black] pl-1"
+                   defaultValue={student.gender} />
+            <input
+              type="input"
+              name="enrollment"
+              className="w-[4rem] border-[1px] border-[black] pl-1"
+              defaultValue={student.enrollment}
+            />
+            <input type="input" 
+                   className="w-[14rem] border-[1px] border-[black] pl-1"
+                   name="address" defaultValue={student.address} />
+            <input type="input" 
+                   name="phone" 
+                   className="w-[7rem] border-[1px] border-[black] pl-1"
+                   defaultValue={student.phone} />
+            <input
+              type="input"
+              name="linkedin"
+              className="w-[6rem] border-[1px] border-[black] pl-1"
+              defaultValue={student.linkedin}
+            />
+            <input type="input" 
+            className="w-[3rem] border-[1px] border-[black] pl-1"
+            name="gpa" defaultValue={student.gpa} />
+            <input
+              type="input"
+              className="w-[3rem] border-[1px] border-[black] pl-1"
+              name="absences"
+              defaultValue={student.absences}
+            />
+            <div className="flex w-[11rem]">
+            <input type="submit" 
+                   className="bg-green-500 p-[5px] ml-auto  px-[.80rem] rounded-[10px] text-white shadow-sm hover:bg-indigo-700 hover:text-white
+                   bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-50 ease-in-out duration-500 cursor-pointer"
+                   value={`Update ${student.name}`} />
+            </div>
+          </Form>
+          <Form action={`/delete/${student._id}`} method="post" className="flex py-3">
+            <input className="bg-red-600 text-[white] p-[5px] ml-auto px-4 rounded-[10px] cursor-pointer hover:bg-red-800" type="submit" value={`Delete ${student.name}`} />
+          </Form>
+       </div>
+      ))}
     </div>
-  );
-}
+    );}
 
 export default Index;
