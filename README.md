@@ -6,7 +6,10 @@
 
 
 # Models
+
 [Models](https://imgur.com/a/aF9Kzqr)
+
+
 
 # Route Table
 | Endpoint | Method | Description |
@@ -27,7 +30,18 @@
 # Trello
 [Trello Board](https://trello.com/invite/b/TShlunOt/ATTI0abf7e210b87e1d3b034e179b2b71de6AFACF11D/student-tracker-project)
 
+# Wireframes
+
+### Desktop Mockup
+
+![Desktop Mockup](https://i.imgur.com/tq32g0h.png)
+
+### Mobile Mockup
+
+![Mobile Mockup](https://i.imgur.com/fk1ullB.png)
+
 # Live Site
+https://updatefixed.onrender.com
 
 
 # Role Assignment
@@ -38,3 +52,6 @@
 
 # Wireframes
 [WireFrame](https://docs.google.com/drawings/d/1vlHFFLUVstVfH6cwCjN77KvHYL-q8tFIVCyOIGlOejo/edit?usp=sharing)
+
+[Project Page](https://studentrecordtracker.onrender.com)
+
