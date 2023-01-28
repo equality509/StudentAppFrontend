@@ -48,8 +48,8 @@ function Index(props) {
       {students.map((student) => (
         <div className="studentEntry w-[65rem] m-auto bg-[#EAE7DC] px-5 border-[#b8a181] border-[2px]" key={student._id}>
           <h2 className="ml-[-.25rem] p-[.25rem] uppercase font-semibold text-gray-500">
-            <a href={student._id} alt={student.title}>
-              {/* {student.name}{" "} */}
+            <a href={`/${student._id}`} alt={student.title}>
+              {student.name}{" "}
             </a>
           </h2>
 
